@@ -1,0 +1,17 @@
+{
+    "name": "forms-ds",
+    "description": null,
+    "type": "azureblob",
+    "subtype": null,
+    "credentials": {
+      "connectionString": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=..."
+    },
+    "container": {
+      "name": "...",
+      "query": null
+    },
+    "dataChangeDetectionPolicy": null,
+    "dataDeletionDetectionPolicy": null,
+    "encryptionKey": null,
+    "identity": null
+  }

@@ -1,0 +1,43 @@
+{
+    "name" : "forms-indexer",
+    "dataSourceName" : "forms-ds",
+    "targetIndexName" : "forms-index",
+    "skillsetName": "forms-skillset",
+    "description": null,
+    "disabled": null,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": null,
+      "maxFailedItemsPerBatch": null,
+      "base64EncodeKeys": null,
+      "configuration": {
+        "indexedFileNameExtensions": ".pdf,.docx",
+        "excludedFileNameExtensions": ".png,.jpeg",
+        "dataToExtract": "contentAndMetadata",
+        "parsingMode": "default"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "id",
+        "mappingFunction": {
+          "name": "base64Encode",
+          "parameters": null
+        }
+      }
+    ],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/extracted/document_title",
+        "targetFieldName": "title"
+      },
+      {
+        "sourceFieldName": "/document/extracted/document_editor",
+        "targetFieldName": "editor"
+      }
+    ],
+    "cache": null,
+    "encryptionKey": null
+  }
